@@ -38,6 +38,4 @@ RUN curl -s -f -L -o /tmp/installer.php https://raw.githubusercontent.com/compos
 RUN pecl install inotify
 RUN docker-php-ext-enable inotify
 
-RUN apk del .phpize-deps
-
 WORKDIR /app
