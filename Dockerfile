@@ -5,8 +5,8 @@ RUN pecl channel-update pecl.php.net \
   && apk add --no-cache --virtual .phpize-deps $PHPIZE_DEPS linux-headers zlib-dev
 
 # swoole
-# RUN pecl install swoole \
-#   && docker-php-ext-enable swoole
+RUN pecl install swoole \
+  && docker-php-ext-enable swoole
 
 # postgres
 RUN apk add --no-cache postgresql-dev \
